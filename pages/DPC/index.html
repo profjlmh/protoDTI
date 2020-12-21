@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Diseño por Computadora</title>
+    <link rel="shortcut icon" href="./assets/img/favicon.ico" />
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- import the webpage's stylesheet -->
+    <link rel="stylesheet" href="./style.css" />
+    <link rel="stylesheet" href="./pages/main/main.css" />
+
+    <!-- import the webpage's javascript file -->
+    <script src="./components/header/header.js"></script>
+    <script src="./pages/main/main.js"></script>
+    <script src="./components/feedback/stickybutton.js"></script>
+  </head>
+
+  <body>
+    <page-header assetsUrl="assets"></page-header>
+    <div class="background">
+      <div class="content">
+        <p class="title">Creacion de diseño por computadora</p>
+        <p class="paragraph">
+            AQUI VA UNA BREVE DESCRIPCION
+        </p>
+
+        <img class="splashscreen"  src="./assets/img/splashscreen.png" alt="Demo image home page"/>
+
+        <p class="lead">Elige la siguiente opcion</p>
+
+
+          <label class="radio-container paragraph">
+            <span class="radio-title">Marcador personalizado</span>
+            <input
+              id="marker"
+              type="radio"
+              name="radio"
+              onclick="radioOnclick(this)"
+            />
+            <span>
+                Carga tu marcador y tu modelo
+            </span>
+            <span class="checkmark"></span>
+          </label>
+
+          <div class="buttons-container">
+            <a onclick="anchorOnclick(this)" id="start-building" class="primary-button">Empecemos</a>
+          </div>
+         
+            Da click en el boton una vez seleccionado
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

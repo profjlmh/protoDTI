@@ -1,0 +1,23 @@
+/* CSS files add styling rules to your content */
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: helvetica, arial, sans-serif;
+}
+
+section {
+  padding: 0 100px;
+  background: url("https://cdn.glitch.com/c36ac99c-eb4c-4d9a-b57d-5f464f1fdc9f%2FMosaico%20real.jpg?v=1601965809768");
+  height: 100vh;
+  display: flex;
+  jalign-items: center;
+}
+
+.box {
+  position: relative;
+  max-width: 600px;
+  padding: 50px;
+  background: rgba(255, 255, 255, 0.2); 
+  box-shadow: 0 5px 15px rgba(0, 0, 0.5);
+}

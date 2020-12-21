@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <script src="https://aframe.io/releases/1.0.4/aframe.min.js"></script>
+    <script src="https://raw.githack.com/AR-js-org/AR.js/master/aframe/build/aframe-ar.js"></script>
+    <script src="https://raw.githack.com/AR-js-org/studio-backend/master/src/modules/marker/tools/gesture-detector.js"></script>
+    <script src="https://raw.githack.com/AR-js-org/studio-backend/master/src/modules/marker/tools/gesture-handler.js"></script>
+  </head>
+
+  <body style="margin: 0; overflow: hidden;">
+    <a-scene
+      vr-mode-ui="enabled: false;"
+      loading-screen="enabled: false;"
+      arjs="trackingMethod: best; sourceType: webcam; debugUIEnabled: false;"
+      id="scene"
+      embedded
+      gesture-detector
+      renderer="gammaOutput: true"
+    >
+      <a-marker
+        id="animated-marker"
+        type="pattern"
+        preset="custom"
+        url="https://cdn.glitch.com/e777d8ac-fe98-4e7d-9550-c22d40da66a1%2FIQ.patt?v=1607121542259"
+        raycaster="objects: .clickable"
+        emitevents="true"
+        cursor="fuse: false; rayOrigin: mouse;"
+        id="markerA"
+      >
+        <a-image
+          src="https://cdn.glitch.com/e777d8ac-fe98-4e7d-9550-c22d40da66a1%2Fasset2.png?v=1607111014318"
+          scale="1 1 1"
+          position="1 .5 0"
+          rotation="-90 0 0"
+        ></a-image>
+
+        <a-entity
+          id="bowser-model"
+          scale="1.627093961116852 1.627093961116852 1.627093961116852"
+          rotation="-90 0 0"
+          position="0 .5 0"
+          animation-mixer="loop: repeat"
+          gltf-model="https://cdn.glitch.com/e777d8ac-fe98-4e7d-9550-c22d40da66a1%2Ffes.gltf?v=1607112695137"
+          class="clickable"
+          gesture-handler
+        ></a-entity>
+      </a-marker>
+
+      <a-entity camera></a-entity>
+    </a-scene>
+  </body>
+</html>
